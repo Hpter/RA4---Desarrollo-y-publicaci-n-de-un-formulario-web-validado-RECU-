@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Inscripciones PRO</title>
+</head>
+
+<body>
+  <main class="contenedor">
+    <h1>Inscripciones PRO</h1>
+
+    <form id="formularioInscripcion" novalidate>
+
+      <div class="campo">
+        <label for="nombre">Nombre y apellido *</label>
+        <input id="nombre" type="text" required minlength="3" placeholder="Ej: Ana García" />
+        <div id="errorNombre" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Email *</label>
+        <input id="correo" type="email" required placeholder="Ej: ana@correo.com" />
+        <div id="errorCorreo" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label for="edad">Edad *</label>
+        <input id="edad" type="number" required min="16" max="99" placeholder="Mínimo 16 años" />
+        <div id="errorEdad" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha de inscripción *</label>
+        <input id="fecha" type="date" required />
+        <div id="errorFecha" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label for="actividad">Actividad *</label>
+        <select id="actividad" required>
+          <option value="">-- Elige una --</option>
+          <option value="html">Taller HTML</option>
+          <option value="css">Taller CSS</option>
+          <option value="js">Taller JS</option>
+        </select>
+        <div id="errorActividad" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" rows="3" maxlength="200" placeholder="Escribe aquí cualquier duda (máx. 200 caracteres)"></textarea>
+        <div id="errorComentarios" class="texto-error"></div>
+      </div>
+
+      <div class="campo">
+        <label>
+          <input id="condiciones" type="checkbox" required />
+          Acepto las condiciones *
+        </label>
+        <div id="errorCondiciones" class="texto-error"></div>
+      </div>
+
+      <button type="submit">Inscribirme</button>
+
+    </form>
+
+    <div id="mensajes" class="mensajes" aria-live="polite"></div>
+
+    <h2>Lista de inscritos</h2>
+    <ul id="listaInscripciones"></ul>
+
+  </main>
+
+  <script src="validacion.js"></script>
+</body>
+
+</html>
