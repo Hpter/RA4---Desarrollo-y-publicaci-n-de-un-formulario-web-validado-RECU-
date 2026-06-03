@@ -17,15 +17,6 @@ h2 { margin: 20px 0 10px; }
 
 .campo { margin-bottom: 12px; }
 
-label { display: block; margin-bottom: 4px; }
-
-input, select, textarea {
-  width: 100%;
-  padding: 7px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
 .texto-error { color: red; font-size: 12px; }
 
 button {
